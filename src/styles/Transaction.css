@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+.transaction-container {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #1E1E1E;
+  color: #CCCCCC;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+/* Send Money Card */
+.transaction-card {
+  background-color: #272727;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 400px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.transaction-card h3 {
+  margin: 0 0 1rem 0;
+  color: #FF4004;
+}
+
+.transaction-card label {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.transaction-card select,
+.transaction-card input {
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  background-color: #1E1E1E;
+  color: #CCCCCC;
+  outline: none;
+}
+
+.transaction-card select option {
+  background-color: #272727;
+  color: #fff;
+}
+
+.transaction-card button {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #FF4004, #D93C00);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.transaction-card button:hover {
+  opacity: 0.9;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: #4CFF9C;
+  color: #000;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* Transaction History Table */
+.transactions-section {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.transactions-section h2 {
+  margin-bottom: 1rem;
+}
+
+.transactions-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-section th,
+.transactions-section td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.transactions-section th {
+  color: #AAAAAA;
+  border-bottom: 1px solid #333;
+}
+
+.transactions-section td {
+  border-bottom: 1px solid #333;
+}
+
+.negative {
+  color: #FF4C4C;
+}
+
+.positive {
+  color: #4CFF9C;
+}
+
+.completed {
+  color: #4CFF9C;
+  font-weight: 700;
+}
+
+.pending {
+  color: #FFDC4C;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .transaction-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .transactions-section {
+    width: 95%;
+  }
+}

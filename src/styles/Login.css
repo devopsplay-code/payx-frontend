@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1E1E1E;
+}
+
+.login-page-container {
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: #1E1E1E;
+}
+
+.login-page-card {
+  background-color: #272727;
+  color: #FFFFFF;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  width: 350px;
+  max-width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-page-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.7);
+}
+
+.login-page-card h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.login-page-card input {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #1E1E1E;
+  color: #E0E0E0;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.login-page-card input:focus {
+  outline: none;
+  border: 2px solid #FF4004;
+  box-shadow: 0 0 6px #FF4004;
+}
+
+.login-page-card button {
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #FF4004;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.login-page-card button:hover {
+  background-color: #D93C00;
+  transform: translateY(-2px);
+}
+
+.success, .error {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.success { color: #4CFF9C; }
+.error { color: #FF4C4C; }
+
+.toggle-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #CCC;
+}
+
+.toggle-link span {
+  color: #4F8EF7;
+  cursor: pointer;
+  transition: text-decoration 0.2s ease;
+}
+
+.toggle-link span:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-page-card {
+    width: 90%;
+    padding: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-page-card h1 {
+    font-size: 1.5rem;
+  }
+  .login-page-card input,
+  .login-page-card button {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .toggle-link {
+    font-size: 0.8rem;
+  }
+}
+
+.signup-page-card button,
+.login-page-card button {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  margin: 0; /* removes any default margin */
+  border: none;
+  border-radius: 8px; /* keep consistent with input fields */
+  background-color: #FF4004;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  box-sizing: border-box; /* ensures same width calculation */
+}
+
+.signup-page-card input,
+.login-page-card input {
+  width: 100%;
+  padding: 0.9rem;
+  margin: 0 0 1rem 0; /* ensures equal gap between elements */
+  border: none;
+  border-radius: 8px;
+  background-color: #1E1E1E;
+  color: #E0E0E0;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.signup-page-card button:hover,
+.login-page-card button:hover {
+  background-color: #D93C00;
+  transform: translateY(-2px);
+}

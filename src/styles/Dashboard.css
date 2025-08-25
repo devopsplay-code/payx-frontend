@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+.dashboard-container {
+  font-family: 'Roboto Mono', monospace;
+  background-color: #1E1E1E;
+  color: #CCCCCC;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+/* Top Navigation */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #272727;
+}
+
+.nav-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #FF4004;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: #CCCCCC;
+}
+
+.nav-links li:hover {
+  color: #FFFFFF;
+}
+
+/* Credit Card */
+.credit-card {
+  background: linear-gradient(135deg, #FF4004, #D93C00);
+  border-radius: 16px;
+  padding: 2rem;
+  color: #fff;
+  width: 320px;
+  margin: 2rem auto;
+  position: relative;
+}
+
+.card-chip {
+  width: 50px;
+  height: 35px;
+  background-color: gold;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+}
+
+.card-number {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.card-name-expiry {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: #272727;
+  padding: 1.5rem;
+  border-radius: 12px;
+  width: 200px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #AAAAAA;
+}
+
+.stat-card p {
+  margin: 0.5rem 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+/* Transactions Table */
+.transactions-section {
+  width: 90%;
+  margin: 0 auto 3rem auto;
+}
+
+.transactions-section h2 {
+  margin-bottom: 1rem;
+}
+
+.transactions-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-section th,
+.transactions-section td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.transactions-section th {
+  color: #AAAAAA;
+  border-bottom: 1px solid #333;
+}
+
+.transactions-section td {
+  border-bottom: 1px solid #333;
+}
+
+.negative {
+  color: #FF4C4C;
+}
+
+.positive {
+  color: #4CFF9C;
+}
+
+.completed {
+  color: #4CFF9C;
+  font-weight: 700;
+}
+
+.pending {
+  color: #FFDC4C;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .credit-card {
+    width: 90%;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+/* Existing styles here... (keep as-is) */
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-section {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .credit-card {
+    width: 80%;
+    padding: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .credit-card {
+    width: 90%;
+  }
+
+  .transactions-section {
+    width: 95%;
+  }
+
+  .nav-links {
+    gap: 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-links li span {
+    display: none; /* Only show icons on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .credit-card {
+    padding: 1rem;
+  }
+
+  .stat-card {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .transactions-section th,
+  .transactions-section td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}
